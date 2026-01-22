@@ -5,7 +5,8 @@ local ns = vim.api.nvim_create_namespace("unobtrusive-relnums")
 local config = {
 	step         = 5,
 	max_distance = 200,
-	sign_hl      = "Comment"
+	sign_hl      = "Comment",
+	priority     = 1
 }
 
 M.render = function()
@@ -32,7 +33,7 @@ M.render = function()
 	vim.api.nvim_buf_set_extmark(bufnr, ns, l - 1, 0, {
 	sign_text = tostring(dist),
 	sign_hl_group = config.sign_hl,
-	priority = 1,
+	priority = config.priority,
 	})
 	end
 	end
