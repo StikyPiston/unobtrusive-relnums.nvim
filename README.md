@@ -1,5 +1,7 @@
 # unobtrusive-relnums.nvim
 
+![unobtrusive-relnums in action](assets/preview.png)
+
 **unobtrusive-relnums.nvim** is a Neovim plugin that adds unobtrusive relative line numbers to the sign column.
 
 I wrote this plugin for a very specific reason:
