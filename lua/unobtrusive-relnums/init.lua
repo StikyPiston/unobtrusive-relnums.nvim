@@ -38,4 +38,17 @@ M.render = function()
 	end
 end
 
+local M.setup = function(opts)
+  config = vim.tbl_extend("force", config, opts or {})
+
+  vim.api.nvim_create_autocmd({
+    "CursorMoved",
+    "CursorMovedI",
+    "BufEnter",
+    "WinScrolled",
+  }, {
+    callback = M.render,
+  })
+end
+
 return M
