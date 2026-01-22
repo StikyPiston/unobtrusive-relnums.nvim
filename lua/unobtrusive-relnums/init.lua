@@ -32,7 +32,7 @@ M.render = function()
 	vim.api.nvim_buf_set_extmark(bufnr, ns, l - 1, 0, {
 	sign_text = tostring(dist),
 	sign_hl_group = config.sign_hl,
-	priority = 10,
+	priority = 1,
 	})
 	end
 	end
