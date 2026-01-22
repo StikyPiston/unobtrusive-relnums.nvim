@@ -14,6 +14,18 @@ More specifically, I dont' like how visually busy they are by constantly shiftin
 ```lua
 return {
     "stikypiston/unobtrusive-relnums.nvim",
-    config = function() require("unobtrusive-relnums").setup() end
+    opts = {}
+}
+```
+
+## Configuration
+
+This is the default configuration with all available options, tweak it as you please.
+
+```lua
+opts = {
+    step         = 5,        -- The increments that the relative numbers should be in
+    max_distance = 200,      -- The maximum distance that the numbers render for, in lines
+    sign_hl      = "Comment" -- The highlighting group to use as the colour of the numbers
 }
 ```
