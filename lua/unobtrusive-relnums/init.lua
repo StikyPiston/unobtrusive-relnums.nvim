@@ -11,7 +11,7 @@ local config = {
 
 M.render = function()
 	local bufnr = vim.api.nvim_get_current_buf()
-	local win = vim.api.nvim_get_current_win()
+	local win   = vim.api.nvim_get_current_win()
 
 	if not vim.api.nvim_buf_is_loaded(bufnr) then return end
 
