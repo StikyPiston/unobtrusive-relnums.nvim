@@ -30,5 +30,6 @@ opts = {
     max_distance = 200,      -- The maximum distance that the numbers render for, in lines
     sign_hl      = "Comment" -- The highlighting group to use as the colour of the numbers
     priority     = 1         -- The rendering priority on the sign column
+    cursor_icon  = "⬤"       -- The character to render in the sign column on the current line
 }
 ```

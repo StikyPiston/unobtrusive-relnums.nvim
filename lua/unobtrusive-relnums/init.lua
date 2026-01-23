@@ -6,7 +6,8 @@ local config = {
 	step         = 5,
 	max_distance = 200,
 	sign_hl      = "Comment",
-	priority     = 1
+	priority     = 1,
+	cursor_icon = "⬤" -- TODO: Replace with nerd font icon
 }
 
 M.render = function()
@@ -22,6 +23,12 @@ M.render = function()
 
 	local first       = vim.fn.line("w0")
 	local last        = vim.fn.line("w$")
+
+	vim.api.nvim_buf_set_extmark(bufnr, ns, cursor_line - 1, 0, {
+	  sign_text = config.cursor_icon,
+	  sign_hl_group = "Comment",
+	  priority = config.priority
+	})
 
 	for l = first, last do
 		local dist = math.abs(l - cursor_line)
